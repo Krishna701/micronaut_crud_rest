@@ -12,6 +12,8 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
     annotationProcessor("io.micronaut.data:micronaut-data-processor")
     annotationProcessor("io.micronaut:micronaut-http-validation")
     implementation("io.micronaut:micronaut-http-client")
@@ -20,7 +22,12 @@ dependencies {
     implementation("io.micronaut.sql:micronaut-jdbc-hikari")
     implementation("jakarta.annotation:jakarta.annotation-api")
     runtimeOnly("ch.qos.logback:logback-classic")
+    implementation("io.micronaut.sql:micronaut-hibernate-jpa")
+    implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
+    //for postgres
     runtimeOnly("org.postgresql:postgresql")
+    runtimeOnly("com.h2database:h2")
+
     implementation("io.micronaut:micronaut-validation")
 
 }

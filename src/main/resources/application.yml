@@ -3,11 +3,25 @@ micronaut:
     name: micronaut_crud_rest
 datasources:
   default:
+    url: jdbc:postgresql://localhost:5432/pharmacy_test
     driverClassName: org.postgresql.Driver
     db-type: postgresql
-    schema-generate: CREATE_DROP
+    username: postgres
+    password: Postgres701
     dialect: POSTGRES
+
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
+
+
 netty:
   default:
     allocator:
       max-order: 3
+
+
